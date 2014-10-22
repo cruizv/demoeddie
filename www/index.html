@@ -39,8 +39,17 @@
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/telephonenumber.js"></script>
         <script type="text/javascript">
             app.initialize();
+var telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
+telephoneNumber.get(function(result) {
+        console.log("result = " + result);
+        alert("result = " + result);
+    }, function() {
+        console.log("error");
+        alert("error");
+    });
         </script>
     </body>
 </html>
